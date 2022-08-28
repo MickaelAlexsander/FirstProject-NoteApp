@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Note App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_note_button">Create Note</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+    <string name="inputDesc">Write your note here...</string>
+</resources>
