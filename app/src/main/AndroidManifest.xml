@@ -4,7 +4,7 @@
     package="com.example.noteapp">
 
     <application
-        android:name=".viewmodel.InventoryApplication"
+        android:name=".viewmodel.NoteApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
