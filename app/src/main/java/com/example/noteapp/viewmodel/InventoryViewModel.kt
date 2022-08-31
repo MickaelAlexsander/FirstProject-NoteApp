@@ -1,5 +1,7 @@
 package com.example.noteapp.viewmodel
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -10,6 +12,9 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 class InventoryViewModel(private val noteDao: NoteDao): ViewModel() {
+
+    val allItems: LiveData<List<Note>> = noteDao.getNotes().asLiveData()
+
 
     /**
     THAT FUNCTION INSERT IN YOUR DATABASE ONE NEW NOTE
