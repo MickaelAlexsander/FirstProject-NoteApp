@@ -34,7 +34,11 @@ class NoteListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter =  NoteListAdapter{}
+        val adapter = NoteListAdapter {
+            val action = NoteListFragmentDirections.actionNoteListFragmentToNoteDetailFragment(it.id)
+            findNavController().navigate(action)
+        }
+
         binding.recycleView.adapter = adapter
         viewModel.allItems.observe(this.viewLifecycleOwner){ notes ->
             notes.let {
@@ -42,11 +46,11 @@ class NoteListFragment : Fragment() {
             }
         }
 
-
         binding.recycleView.layoutManager = LinearLayoutManager(this.context)
         binding.createNoteButton.setOnClickListener {
             val action = NoteListFragmentDirections.actionNoteListFragmentToCreateNoteFragment()
             this.findNavController().navigate(action)
         }
     }
+
 }
