@@ -34,6 +34,14 @@ class InventoryViewModel(private val noteDao: NoteDao): ViewModel() {
         }
     }
     /**
+    THAT FUNCTION UPDATE IN YOUR DATABASE
+     */
+    fun deleteNote(note: Note){
+        viewModelScope.launch {
+            noteDao.delete(note)
+        }
+    }
+    /**
     THAT FUNCTION WILL TAKE A USER ENTRY AND TRANSFORM IN A NOTE OBJECT
      */
     private fun getNewEntry(noteTitle: String, noteDesc: String, notePriority: String): Note{
