@@ -6,10 +6,12 @@
     <string name="high">High</string>
     <string name="medium">Medium</string>
     <string name="low">Low</string>
-    <string name="inputDesc">Write your note here...</string>
-    <string name="title">Title...</string>
+    <string name="inputDesc">Write your note here</string>
+    <string name="title">Title</string>
     <string name="delete_note_btn">delete note</string>
+    <string name="alert">Attention</string>
     <string name="delete_question">Are you sure you want delete this note?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="priority">Priority:</string>
 </resources>

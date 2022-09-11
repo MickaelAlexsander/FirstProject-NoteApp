@@ -42,8 +42,8 @@ class AddNoteFragment : Fragment() {
         }
 
         return viewModel.isEntryValid(
-            binding.inputTitle.text.toString(),
-            binding.inputDesc.text.toString(),
+            binding.inputTitle.editText.toString(),
+            binding.inputDesc.editText.toString(),
             priority
         )
     }
@@ -55,8 +55,8 @@ class AddNoteFragment : Fragment() {
         }
         if (isEntryValid()) {
             viewModel.addNewNote(
-                binding.inputTitle.text.toString(),
-                binding.inputDesc.text.toString(),
+                binding.inputTitle.editText?.getText().toString(),
+                binding.inputDesc.editText?.getText().toString(),
                 priority
             )
             val action = AddNoteFragmentDirections.actionCreateNoteFragmentToNoteListFragment()

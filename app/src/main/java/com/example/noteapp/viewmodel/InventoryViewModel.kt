@@ -16,6 +16,12 @@ class InventoryViewModel(private val noteDao: NoteDao): ViewModel() {
 
     val allItems: LiveData<List<Note>> = noteDao.getNotes().asLiveData()
 
+    val highPriorityNote: LiveData<List<Note>> = noteDao.getHighPriority().asLiveData()
+
+    val mediumPriorityNote: LiveData<List<Note>> = noteDao.getMediumPriority().asLiveData()
+
+    val lowPriorityNote: LiveData<List<Note>> = noteDao.getLowPriority().asLiveData()
+
 
     /**
     THAT FUNCTION INSERT IN YOUR DATABASE ONE NEW NOTE

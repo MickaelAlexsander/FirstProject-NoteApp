@@ -46,6 +46,8 @@ class NoteListFragment : Fragment() {
             }
         }
 
+
+
         binding.recycleView.layoutManager = LinearLayoutManager(this.context)
         binding.createNoteButton.setOnClickListener {
             val action = NoteListFragmentDirections.actionNoteListFragmentToCreateNoteFragment()
